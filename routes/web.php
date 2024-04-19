@@ -67,3 +67,9 @@ Route::get('spek/{nama}/{bb}/{tb}', function ($a, $bb, $tb) {
         . "Nilai BMI: $bmi<br>"
         . "Keterangan: $ket";
 });
+
+//Route Optional Parameter -> ditandai dengan ?
+Route::get('myname/{name?}', function ($a = "Abdu") {
+    return "<h1>Route </h1>"
+    ."User Name : $a";
+});
